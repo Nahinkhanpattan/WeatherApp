@@ -24,7 +24,7 @@ check.addEventListener("click", () => {
                 temperature.innerHTML = "--°C";
                 humidity.innerText = "Humidity: --%";
                 windSpeed.innerText = "Wind Speed: -- km/h";
-                tempIcon.src = "cloud.svg"; // Reset to default icon
+                tempIcon.src = "default.png"; // Reset to default icon
                 return;
             }
 
@@ -46,19 +46,19 @@ check.addEventListener("click", () => {
             // ✅ Set weather icon correctly
             let weatherId = data.weather[0].id;
             if (weatherId < 250) {
-                tempIcon.src = "./tempicons/storm.svg";
+                tempIcon.src = "storm.svg";
             } else if (weatherId < 350) {
-                tempIcon.src = "./tempicons/drizzle.svg";
+                tempIcon.src = "drizzle.svg";
             } else if (weatherId < 550) {
-                tempIcon.src = "./tempicons/snow.svg";
+                tempIcon.src = "snow.svg";
             } else if (weatherId < 650) {
-                tempIcon.src = "./tempicons/rain.svg";
+                tempIcon.src = "rain.svg";
             } else if (weatherId < 800) {
-                tempIcon.src = "./tempicons/atmosphere.svg";
+                tempIcon.src = "atmosphere.svg";
             } else if (weatherId === 800) {
-                tempIcon.src = "./tempicons/sun.svg";
+                tempIcon.src = "sun.svg";
             } else if (weatherId > 800) {
-                tempIcon.src = "./tempicons/clouds.svg";
+                tempIcon.src = "clouds.svg";
             }
 
             city.value = "";
